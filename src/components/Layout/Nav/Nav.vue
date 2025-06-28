@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Tools from '../Tools/Tools.vue'
 defineExpose({
   name: 'Nav',
 })
@@ -6,11 +7,11 @@ defineExpose({
 
 <template>
   <div class="Nav">
-    <div class="logo">
+    <div class="logo" @click="$router.push('/')">
       <img src="@/assets/logo.svg" alt="Logo" />
-      <span>Void UI</span>
+      <span>Void UI 组件库</span>
     </div>
-    <div class="tools">12233</div>
+    <Tools />
   </div>
 </template>
 

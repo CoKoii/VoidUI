@@ -1,0 +1,9 @@
+.Tools {
+  display: flex;
+  gap: 16px;
+  span {
+    padding: 8px;
+    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+}

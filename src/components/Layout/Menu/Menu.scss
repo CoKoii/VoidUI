@@ -25,3 +25,9 @@
     white-space: nowrap;
   }
 }
+@media (max-width: 768px) {
+  .Menu {
+    top: auto;
+    bottom: 16px;
+  }
+}
