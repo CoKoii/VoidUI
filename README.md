@@ -1,2 +1,5 @@
 # VoidUI
-Vue3 + TS + Sass 打造的前端UI组件库
+
+极简化
+
+Vue3 + TS + Sass 打造的前端 UI 组件库
