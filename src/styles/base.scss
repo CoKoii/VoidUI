@@ -14,7 +14,7 @@ body {
   line-height: 1.5;
   color: #333;
   -webkit-font-smoothing: antialiased;
-  background-color: #fff;
+  background-color: var(--bg);
   width: 100vw;
   overflow-x: hidden;
 }
