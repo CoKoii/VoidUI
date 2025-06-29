@@ -25,7 +25,9 @@ defineExpose({
       <template #title>
         <span>Github</span>
       </template>
-      <GithubFilled :style="{ fontSize: '14px', color: 'var(--text)' }" />
+      <a href="https://github.com/CoKoii/VoidUI" target="_blank" rel="noopener">
+        <GithubFilled :style="{ fontSize: '14px', color: 'var(--text)' }" />
+      </a>
     </Tooltip>
   </div>
 </template>
