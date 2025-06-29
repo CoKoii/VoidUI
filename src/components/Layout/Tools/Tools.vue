@@ -24,13 +24,13 @@ const changeTheme = () => {
       <template #title>
         <span>日/夜</span>
       </template>
-      <BulbFilled :style="{ fontSize: '14px', color: '#000' }" @click="changeTheme" />
+      <BulbFilled :style="{ fontSize: '14px', color: 'var(--text)' }" @click="changeTheme" />
     </Tooltip>
     <Tooltip placement="bottom">
       <template #title>
         <span>Github</span>
       </template>
-      <GithubFilled :style="{ fontSize: '14px', color: '#000' }" />
+      <GithubFilled :style="{ fontSize: '14px', color: 'var(--text)' }" />
     </Tooltip>
   </div>
 </template>

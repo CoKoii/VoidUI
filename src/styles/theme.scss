@@ -1,6 +1,8 @@
 :root {
   --bg: #ffffff;
+  --text: #333;
 }
 [data-theme='dark'] {
   --bg: #14161a;
+  --text: rgba(255, 255, 255, 0.85);
 }
