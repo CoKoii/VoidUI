@@ -9,7 +9,7 @@ defineExpose({
 
 <template>
   <div class="Home">
-    <h1 class="title">Void Design</h1>
+    <h1 class="title">VOID DESIGN</h1>
     <p class="description">一切从简，安然如山水。</p>
     <div class="buttons">
       <Button type="primary" @click="$router.push('/components')" :icon="h(SendOutlined)"
