@@ -16,18 +16,18 @@ onMounted(() => {
     const tl = gsap.timeline()
     gsap.set([logoImgRef.value, logoTextRef.value], {
       opacity: 0,
-      y: -20,
+      x: -20,
     })
     tl.to(logoImgRef.value, {
       opacity: 1,
-      y: 0,
+      x: 0,
       duration: 0.6,
       ease: 'back.out(1.7)',
     }).to(
       logoTextRef.value,
       {
         opacity: 1,
-        y: 0,
+        x: 0,
         duration: 0.4,
         ease: 'power2.out',
       },
