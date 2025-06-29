@@ -1,71 +1,65 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
-
 defineExpose({
   name: 'Menu',
 })
-
 const menuRef = ref<HTMLElement>()
 const hiTextRef = ref<HTMLElement>()
-
 onMounted(() => {
-  // 初始状态设为圆形小球 + 上方隐藏
+  if (!menuRef.value || !hiTextRef.value) return
+  const isMobile = window.innerWidth <= 768
   gsap.set(menuRef.value, {
-    y: -100,
+    y: isMobile ? 100 : -100,
     width: 48,
     height: 48,
     borderRadius: 24,
+    padding: 0,
     opacity: 0,
     overflow: 'hidden',
   })
-
-  // 隐藏所有导航链接
-  gsap.set(menuRef.value?.querySelectorAll('.nav-link'), {
+  gsap.set(menuRef.value.querySelectorAll('.nav-link'), {
     opacity: 0,
     display: 'none',
   })
-
-  // 显示Hi文字
   gsap.set(hiTextRef.value, {
     opacity: 1,
-    display: 'block',
+    display: 'flex',
   })
-
-  // 动画入场：小球下落 + 展开为导航栏
   const tl = gsap.timeline()
 
-  // 第一步：小球落下并显示
   tl.to(menuRef.value, {
     y: 0,
     opacity: 1,
-    duration: 0.6,
-    ease: 'power2.out',
+    duration: 1.0,
+    ease: 'power3.out',
   })
-    // 第二步：隐藏Hi文字
-    .to(hiTextRef.value, {
-      opacity: 0,
-      duration: 0.2,
-      delay: 0.3,
-    })
-    // 第三步：展开为完整导航栏
-    .to(menuRef.value, {
-      width: 'auto',
-      height: 48,
-      borderRadius: 24,
-      padding: '0 16px',
-      duration: 0.5,
-      ease: 'power2.out',
-    })
-    // 第四步：切换显示导航链接
-    .set(hiTextRef.value, { display: 'none' })
-    .set(menuRef.value?.querySelectorAll('.nav-link'), { display: 'block' })
-    // 第五步：显示导航文字
-    .to(menuRef.value?.querySelectorAll('.nav-link'), {
+    .to({}, { duration: 0.3 })
+    .set(menuRef.value.querySelectorAll('.nav-link'), { display: 'block', opacity: 0 })
+    .to(
+      hiTextRef.value,
+      {
+        opacity: 0,
+        duration: 0,
+        ease: 'power2.out',
+      },
+      'expand',
+    )
+    .set(hiTextRef.value, { display: 'none' }, 'expand+=0.1')
+    .to(
+      menuRef.value,
+      {
+        width: 'auto',
+        padding: '0 16px',
+        duration: 0.8,
+        ease: 'power2.out',
+      },
+      'expand',
+    )
+    .to(menuRef.value.querySelectorAll('.nav-link'), {
       opacity: 0.8,
       duration: 0.3,
-      stagger: 0.1,
-      ease: 'power1.out',
+      ease: 'power2.out',
     })
 })
 </script>
