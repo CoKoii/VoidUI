@@ -1,21 +1,13 @@
 <script setup lang="ts">
 import { Tooltip } from 'ant-design-vue'
 import { GithubFilled, BulbFilled } from '@ant-design/icons-vue'
+import { useThemeStore } from '@/stores/theme'
+
+const themeStore = useThemeStore()
+
 defineExpose({
   name: 'Tools',
 })
-
-const changeTheme = () => {
-  const htmlElement = document.documentElement
-  const currentTheme = htmlElement.getAttribute('data-theme')
-  if (currentTheme === 'dark') {
-    htmlElement.setAttribute('data-theme', 'light')
-    localStorage.setItem('theme', 'light')
-  } else {
-    htmlElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem('theme', 'dark')
-  }
-}
 </script>
 
 <template>
@@ -24,7 +16,10 @@ const changeTheme = () => {
       <template #title>
         <span>日/夜</span>
       </template>
-      <BulbFilled :style="{ fontSize: '14px', color: 'var(--text)' }" @click="changeTheme" />
+      <BulbFilled
+        :style="{ fontSize: '14px', color: 'var(--text)' }"
+        @click="themeStore.toggleTheme"
+      />
     </Tooltip>
     <Tooltip placement="bottom">
       <template #title>
