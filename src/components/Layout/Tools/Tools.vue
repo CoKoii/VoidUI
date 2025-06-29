@@ -7,11 +7,12 @@ defineExpose({
 
 const changeTheme = () => {
   const htmlElement = document.documentElement
-  if (htmlElement.classList.contains('dark')) {
-    htmlElement.classList.remove('dark')
+  const currentTheme = htmlElement.getAttribute('data-theme')
+  if (currentTheme === 'dark') {
+    htmlElement.setAttribute('data-theme', 'light')
     localStorage.setItem('theme', 'light')
   } else {
-    htmlElement.classList.add('dark')
+    htmlElement.setAttribute('data-theme', 'dark')
     localStorage.setItem('theme', 'dark')
   }
 }

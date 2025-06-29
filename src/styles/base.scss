@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html,
 body {
   height: 100%;
@@ -14,9 +13,11 @@ body {
   line-height: 1.5;
   color: #333;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--bg);
   width: 100vw;
   overflow-x: hidden;
+}
+body {
+  background-color: var(--bg);
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
