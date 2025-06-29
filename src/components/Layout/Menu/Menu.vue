@@ -67,10 +67,10 @@ onMounted(() => {
 <template>
   <div class="Menu" ref="menuRef">
     <span class="hi-text" ref="hiTextRef">Hi</span>
-    <router-link to="/" class="nav-link">设计</router-link>
-    <router-link to="/about" class="nav-link">研发</router-link>
-    <router-link to="/contact" class="nav-link">组件</router-link>
-    <router-link to="/blog" class="nav-link">关于</router-link>
+    <router-link to="/design" class="nav-link">设计</router-link>
+    <router-link to="/research" class="nav-link">研发</router-link>
+    <router-link to="/components" class="nav-link">组件</router-link>
+    <router-link to="/about" class="nav-link">关于</router-link>
   </div>
 </template>
 
