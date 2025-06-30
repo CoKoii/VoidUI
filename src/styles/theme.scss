@@ -1,8 +1,10 @@
 :root {
   --bg: #ffffff;
   --text: #333;
+  --line: rgba(30, 32, 37, 0.08);
 }
 [data-theme='dark'] {
-  --bg: #14161a;
+  --bg: #1e2025;
   --text: rgba(255, 255, 255, 0.85);
+  --line: rgba(255, 255, 255, 0.08);
 }

@@ -1,0 +1,90 @@
+.Hero {
+  width: 100%;
+  height: 80vh;
+  padding: 0 36px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('/favicon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    opacity: 0.1;
+    user-select: none;
+    z-index: -1;
+  }
+
+  .title {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 80px;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 32px;
+    font-weight: 600;
+    white-space: nowrap;
+    user-select: none;
+    margin: 0;
+  }
+
+  .description {
+    position: absolute;
+    top: 215px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .buttons {
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    button {
+      height: 35px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Hero {
+    &::before {
+      display: none;
+    }
+    .title {
+      top: 120px;
+      font-size: 55px;
+      font-weight: 700;
+      letter-spacing: 20px;
+      white-space: wrap;
+      left: unset;
+      transform: translateX(0);
+      line-height: 1.2;
+      text-align: unset;
+    }
+    .description {
+      top: 280px;
+      left: unset;
+      transform: translateX(0);
+      font-weight: 500;
+    }
+    .buttons {
+      top: 350px;
+      left: unset;
+      transform: translateX(0);
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

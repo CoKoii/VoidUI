@@ -7,3 +7,10 @@
     left: 0;
   }
 }
+@media (max-width: 768px) {
+  .Layout {
+    .content {
+      top: 60px;
+    }
+  }
+}

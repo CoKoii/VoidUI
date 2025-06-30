@@ -25,6 +25,7 @@
 @media (max-width: 768px) {
   .Nav {
     height: 60px;
+    border-bottom: 1px solid var(--line);
     .logo {
       span {
         display: none;
