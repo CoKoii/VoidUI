@@ -8,8 +8,6 @@
     overflow-y: auto;
     border-right: 1px solid var(--line);
     padding: 0 16px;
-    background-color: var(--bg);
-    transition: background-color 0.3s;
   }
   .main {
     transition: transform 0.3s;
@@ -23,6 +21,7 @@
   .Components {
     flex-direction: column;
     .nav {
+      background-color: var(--bg);
       transition: transform 0.3s;
       position: absolute;
       transform: translateX(-100%);
