@@ -1,0 +1,45 @@
+.Components {
+  display: flex;
+  position: relative;
+  .nav {
+    z-index: 1000;
+    min-width: 268px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    border-right: 1px solid var(--line);
+    padding: 0 16px;
+    background-color: var(--bg);
+    transition: background-color 0.3s;
+    &::after {
+      content: '展开';
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: translateX(-100%);
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+    }
+  }
+  .main {
+    transition: transform 0.3s;
+    padding: 0 16px;
+    flex: 1;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+}
+@media (max-width: 768px) {
+  .Components {
+    flex-direction: column;
+    .nav {
+      transition: transform 0.3s;
+      position: absolute;
+      transform: translateX(-100%);
+      height: calc(100vh - 60px);
+    }
+    .main {
+      min-height: calc(100vh - 60px);
+    }
+  }
+}
