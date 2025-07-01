@@ -26,20 +26,46 @@
       transition: transform 0.3s;
       position: absolute;
       transform: translateX(-100%);
+      transition: all 0.3s;
       height: calc(100vh - 60px);
-      &::after {
-        content: '展开';
-        position: relative;
-        top: 0;
-        right: 0;
-        transform: translateX(-100%);
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
+      &.open {
+        transform: translateX(0);
+        ~ .nav-toggle {
+          left: 268px;
+        }
       }
     }
     .main {
       min-height: calc(100vh - 60px);
     }
+    .nav-toggle {
+      position: fixed;
+      top: 15%;
+      left: 0;
+      transform: translateY(-50%);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 0px 4px 4px 0px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--text);
+      z-index: 1001;
+      transition: left 0.3s;
+    }
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none !important;
   }
 }
