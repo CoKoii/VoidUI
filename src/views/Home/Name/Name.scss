@@ -13,3 +13,18 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .Name {
+    img {
+      &:nth-child(1) {
+        width: 60px;
+      }
+      &:nth-child(2) {
+        transform: scale(6);
+        position: relative;
+        text-align: center;
+        object-fit: cover;
+      }
+    }
+  }
+}
