@@ -1,1 +1,0 @@
-import{d as n,a as t,b as s,o as a,_ as p}from"./index-BjoS8aJI.js";const c={class:"Components"},_=n({__name:"Components",setup(m,{expose:o}){return o({name:"Components"}),(r,e)=>(a(),t("div",c,e[0]||(e[0]=[s("div",{class:"nav"},"导航栏",-1),s("div",{class:"main"},"主体区域",-1)])))}}),i=p(_,[["__scopeId","data-v-1b2ec7b6"]]);export{i as default};
