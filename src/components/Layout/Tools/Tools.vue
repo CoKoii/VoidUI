@@ -14,12 +14,11 @@ defineExpose({
   <div class="Tools">
     <Tooltip placement="bottom">
       <template #title>
-        <span>日/夜</span>
+        <span>个人博客</span>
       </template>
-      <BulbFilled
-        :style="{ fontSize: '14px', color: 'var(--text)' }"
-        @click="themeStore.toggleTheme"
-      />
+      <a href="https://rtb.caok.top" target="_blank" rel="noopener" style="margin-right: 13px"
+        >博客</a
+      >
     </Tooltip>
     <Tooltip placement="bottom">
       <template #title>
@@ -28,6 +27,15 @@ defineExpose({
       <a href="https://github.com/CoKoii/VoidUI" target="_blank" rel="noopener">
         <GithubFilled :style="{ fontSize: '14px', color: 'var(--text)' }" />
       </a>
+    </Tooltip>
+    <Tooltip placement="bottom">
+      <template #title>
+        <span>日/夜</span>
+      </template>
+      <BulbFilled
+        :style="{ fontSize: '14px', color: 'var(--text)' }"
+        @click="themeStore.toggleTheme"
+      />
     </Tooltip>
   </div>
 </template>
