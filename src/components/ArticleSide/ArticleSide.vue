@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Anchor } from 'ant-design-vue'
-
 defineExpose({
   name: 'ArticleSide',
 })
@@ -22,7 +21,7 @@ defineExpose({
           },
           {
             key: '2',
-            href: '#components-anchor-demo-static',
+            href: '#hhhh',
             title: 'Static demo',
           },
           {

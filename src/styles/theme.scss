@@ -4,6 +4,8 @@
   --line: rgba(30, 32, 37, 0.08);
   --boolean: 0;
   --hover-bg: rgba(0, 0, 0, 0.1);
+  --scroll-bg: rgba(239, 239, 239);
+  --scroll: rgba(206, 206, 207);
 }
 [data-theme='dark'] {
   --bg: #1e2025;
@@ -11,4 +13,6 @@
   --line: rgba(255, 255, 255, 0.08);
   --boolean: 1;
   --hover-bg: rgba(255, 255, 255, 0.1);
+  --scroll-bg: rgba(44, 46, 51);
+  --scroll: rgba(78, 80, 84);
 }
