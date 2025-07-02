@@ -14,6 +14,7 @@ const router = createRouter({
       path: '/components',
       name: 'Components',
       component: () => import('@/views/Components/Components.vue'),
+      redirect: '/components/button',
       children: ComponentsChildren(),
     },
     {
