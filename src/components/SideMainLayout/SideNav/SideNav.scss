@@ -20,6 +20,10 @@
         line-height: 40px;
         border-radius: 8px;
         font-size: 15px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: rgba(43, 90, 237, 0.08);
+        }
       }
       .active {
         background-color: rgba(43, 90, 237, 0.08);
