@@ -42,7 +42,7 @@ defineExpose({
         :code="`<template>
   <a-button type=&quot;primary&quot;>Primary</a-button>
   <a-button type=&quot;secondary&quot;>Secondary</a-button>
-  <a-button type=&quot;outline&quot;>Outline</a-button>
+  <a-button type=&quot;outline&quot;>Outline</a-button><a-button type=&quot;outline&quot;>Outline</a-button>
 </template>`"
         language="vue"
       >
