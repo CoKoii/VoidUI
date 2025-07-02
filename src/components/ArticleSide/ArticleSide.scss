@@ -1,0 +1,16 @@
+.ArticleSide {
+  display: flex;
+  .main {
+    flex: 1;
+  }
+  .nav {
+    width: 212px;
+  }
+}
+@media (max-width: 768px) {
+  .ArticleSide {
+    .nav {
+      display: none;
+    }
+  }
+}
