@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import { ComponentsChildren } from './autoImport'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
@@ -13,18 +14,7 @@ const router = createRouter({
       path: '/components',
       name: 'Components',
       component: () => import('@/views/Components/Components.vue'),
-      children: [
-        {
-          path: 'install',
-          name: 'Install',
-          component: () => import('@/VoidComponents/Install/Install.vue'),
-        },
-        {
-          path: 'button',
-          name: 'Button',
-          component: () => import('@/VoidComponents/Button/Button.vue'),
-        },
-      ],
+      children: ComponentsChildren(),
     },
     {
       path: '/about',
