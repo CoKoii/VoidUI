@@ -18,4 +18,24 @@ h1 {
 }
 h2 {
   font-size: 25px;
+  position: relative;
+
+  &:after {
+    content: '#';
+    opacity: 0;
+    margin-left: 10px;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}
+code {
+  background-color: var(--line);
+  padding: 3px 6px;
+  border-radius: 4px;
+  margin: 0px 1px;
+  font-size: 13px;
+  font-weight: 500;
 }
