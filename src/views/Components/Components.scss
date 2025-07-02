@@ -8,6 +8,22 @@
     overflow-y: auto;
     border-right: 1px solid var(--line);
     padding: 0 16px;
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 3px;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--line);
+      }
+    }
   }
   .main {
     transition: transform 0.3s;

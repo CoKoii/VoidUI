@@ -13,6 +13,12 @@ const router = createRouter({
       path: '/components',
       name: 'Components',
       component: () => import('@/views/Components/Components.vue'),
+      children: [
+        {
+          path: 'button',
+          name: 'Button',
+        },
+      ],
     },
     {
       path: '/about',

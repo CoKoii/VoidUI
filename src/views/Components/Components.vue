@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
+import SideNav from './SideNav/SideNav.vue'
 const isNavOpen = ref(false)
 const toggleNav = () => {
   isNavOpen.value = !isNavOpen.value
@@ -12,7 +13,9 @@ defineExpose({
 
 <template>
   <div class="Components">
-    <div class="nav" :class="{ open: isNavOpen }">导航栏</div>
+    <div class="nav" :class="{ open: isNavOpen }">
+      <SideNav />
+    </div>
     <div class="main">主体区域</div>
     <div class="nav-toggle" @click="toggleNav">
       <MenuUnfoldOutlined v-if="!isNavOpen" />

@@ -1,0 +1,31 @@
+.SideNav {
+  width: 100%;
+  padding: 24px 0;
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    .title {
+      font-weight: 900;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .components {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      a {
+        padding: 0px 16px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+      .active {
+        background-color: rgba(43, 90, 237, 0.08);
+        color: #2b5aed;
+        font-weight: 700;
+      }
+    }
+  }
+}
