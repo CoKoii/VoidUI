@@ -16,7 +16,9 @@ defineExpose({
     <div class="nav" :class="{ open: isNavOpen }">
       <SideNav />
     </div>
-    <div class="main">主体区域</div>
+    <div class="main">
+      <router-view />
+    </div>
     <div class="nav-toggle" @click="toggleNav">
       <MenuUnfoldOutlined v-if="!isNavOpen" />
       <MenuFoldOutlined v-if="isNavOpen" />
