@@ -1,0 +1,64 @@
+.CodePreview {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .preview {
+    width: 100%;
+    border: 1px solid var(--line);
+    margin: 12px 0 8px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .tools {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      background-color: var(--icon-bgcolor);
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s;
+      font-size: 13px;
+      color: var(--icon-color);
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .code-container {
+    margin-top: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+
+    .code {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+
+      code {
+        display: block;
+        padding: 16px;
+        font-family: 'Fira Code', 'Monaco', 'Menlo', monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        overflow-x: auto;
+        white-space: pre;
+        background: #2d3748;
+        color: #e2e8f0;
+      }
+    }
+  }
+}
