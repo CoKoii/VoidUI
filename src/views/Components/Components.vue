@@ -1,11 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
-import SideNav from './SideNav/SideNav.vue'
-const isNavOpen = ref(false)
-const toggleNav = () => {
-  isNavOpen.value = !isNavOpen.value
-}
+import SideMainLayout from '@/components/SideMainLayout/SideMainLayout.vue'
+import { columns } from './tableData'
 defineExpose({
   name: 'Components',
 })
@@ -13,19 +8,8 @@ defineExpose({
 
 <template>
   <div class="Components">
-    <div class="nav" :class="{ open: isNavOpen }">
-      <SideNav />
-    </div>
-    <div class="main">
-      <router-view />
-    </div>
-    <div class="nav-toggle" @click="toggleNav">
-      <MenuUnfoldOutlined v-if="!isNavOpen" />
-      <MenuFoldOutlined v-if="isNavOpen" />
-    </div>
+    <SideMainLayout :columns="columns" />
   </div>
 </template>
 
-<style scoped lang="scss">
-@use './Components.scss';
-</style>
+<style scoped lang="scss"></style>

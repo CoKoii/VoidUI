@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('@/views/Components/Components.vue'),
       children: [
         {
+          path: 'install',
+          name: 'Install',
+          component: () => import('@/VoidComponents/Install/Install.vue'),
+        },
+        {
           path: 'button',
           name: 'Button',
           component: () => import('@/VoidComponents/Button/Button.vue'),
