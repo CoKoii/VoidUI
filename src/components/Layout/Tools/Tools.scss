@@ -1,6 +1,7 @@
 .Tools {
   display: flex;
   align-items: center;
+  user-select: none;
   span {
     padding: 13px;
     background-color: transparent;

@@ -1,6 +1,7 @@
 .SideNav {
   width: 100%;
   padding: 24px 0;
+  user-select: none;
   .item {
     display: flex;
     flex-direction: column;
