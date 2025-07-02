@@ -16,7 +16,11 @@ defineExpose({
       <template #title>
         <span>个人博客</span>
       </template>
-      <a href="https://rtb.caok.top" target="_blank" rel="noopener" style="margin-right: 13px"
+      <a
+        href="https://cokoii.github.io/RTB/"
+        target="_blank"
+        rel="noopener"
+        style="margin-right: 13px"
         >博客</a
       >
     </Tooltip>
