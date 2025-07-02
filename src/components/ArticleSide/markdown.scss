@@ -39,3 +39,37 @@ code {
   font-size: 13px;
   font-weight: 500;
 }
+
+table {
+  user-select: text;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5em 0;
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  code {
+    color: #c81d7f;
+    background-color: transparent;
+  }
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--line);
+  font-size: 13px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}

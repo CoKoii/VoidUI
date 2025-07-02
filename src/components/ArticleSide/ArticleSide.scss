@@ -1,5 +1,6 @@
 .ArticleSide {
   display: flex;
+  user-select: none;
   .main {
     flex: 1;
   }

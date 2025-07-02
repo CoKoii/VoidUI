@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
+  margin-bottom: 32px;
   .preview {
     width: 100%;
     border: 1px solid var(--line);
@@ -30,34 +30,28 @@
       font-size: 13px;
       color: var(--icon-color);
       opacity: 0.7;
-
       &:hover {
         opacity: 1;
       }
     }
   }
-
   .code-container {
     margin-top: 8px;
     border: 1px solid var(--line);
     border-radius: 8px;
     overflow: hidden;
-
     .code {
-      margin: 0;
-      padding: 0;
-      background: transparent;
-
-      code {
-        display: block;
-        padding: 16px;
-        font-family: 'Fira Code', 'Monaco', 'Menlo', monospace;
-        font-size: 14px;
-        line-height: 1.5;
+      :deep(pre) {
+        margin: 0 !important;
+        padding: 16px !important;
+        font-size: 14px !important;
         overflow-x: auto;
         white-space: pre;
-        background: #2d3748;
-        color: #e2e8f0;
+        background-color: #292d3e !important;
+      }
+      :deep(pre code) {
+        background-color: transparent !important;
+        padding: 0 !important;
       }
     }
   }
