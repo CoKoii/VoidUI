@@ -1,6 +1,7 @@
 .Layout {
   width: 100vw;
-  height: auto;
+  height: 100vh;
+  overflow: hidden;
   .content {
     position: relative;
     top: 80px;
