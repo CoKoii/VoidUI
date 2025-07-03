@@ -11,19 +11,18 @@ const columns = [
     title: '参数',
     dataIndex: 'param',
     key: 'param',
-    width: 100,
+    width: 80,
   },
   {
     title: '描述',
     dataIndex: 'description',
     key: 'description',
-    width: 200,
   },
   {
     title: '类型',
     dataIndex: 'type',
     key: 'type',
-    width: 50,
+    width: 300,
 
     customRender: ({ text }: { text: string }) =>
       h('span', { style: { color: '#c41d7f', fontWeight: '500' } }, text),
@@ -32,7 +31,7 @@ const columns = [
     title: '默认值',
     dataIndex: 'defaultValue',
     key: 'defaultValue',
-    width: 500,
+    width: 100,
   },
 ]
 
@@ -138,7 +137,7 @@ const dataSource = [
       <h2 id="API">API</h2>
       通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：<code>type</code> ->
       <code>size</code> -> <code>shape</code> -> <code>status</code> -> <code>disabled</code>。
-      <a-table :columns="columns" :data-source="dataSource" :scroll="{ x: 1500 }" sticky />
+      <a-table :columns="columns" :data-source="dataSource" :pagination="false" bordered />
     </ArticleSide>
   </div>
 </template>

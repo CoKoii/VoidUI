@@ -45,15 +45,12 @@ code {
   margin-top: 40px;
   .ant-table {
     background: transparent !important;
-    border: 1px solid var(--line);
     .ant-table-container {
       background: transparent !important;
     }
     .ant-table-thead > tr > th {
       background: var(--icon-bgcolor) !important;
-      transition: all 0.3s;
     }
-
     .ant-table-tbody > tr > td {
       background: transparent !important;
     }
