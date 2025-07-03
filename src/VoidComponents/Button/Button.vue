@@ -1,9 +1,88 @@
 <script setup lang="ts">
 import ArticleSide from '@/components/ArticleSide/ArticleSide.vue'
+import { h } from 'vue'
 
 defineExpose({
   name: 'Button',
 })
+
+const columns = [
+  {
+    title: '参数',
+    dataIndex: 'param',
+    key: 'param',
+  },
+  {
+    title: '描述',
+    dataIndex: 'description',
+    key: 'description',
+    width: 500,
+  },
+  {
+    title: '类型',
+    dataIndex: 'type',
+    key: 'type',
+    customRender: ({ text }: { text: string }) =>
+      h('span', { style: { color: '#c41d7f', fontWeight: '500' } }, text),
+  },
+  {
+    title: '默认值',
+    dataIndex: 'defaultValue',
+    key: 'defaultValue',
+  },
+]
+
+const dataSource = [
+  {
+    key: '1',
+    param: 'type',
+    description: '按钮的类型',
+    type: 'primary | secondary | outline',
+    defaultValue: 'primary',
+  },
+  {
+    key: '2',
+    param: 'shape',
+    description: '按钮的形状',
+    type: 'round | circle | square',
+    defaultValue: '-',
+  },
+  {
+    key: '3',
+    param: 'status',
+    description: '按钮的状态',
+    type: 'primary | success | warning | danger',
+    defaultValue: '-',
+  },
+  {
+    key: '4',
+    param: 'size',
+    description: '按钮的大小',
+    type: 's | m | l | xl',
+    defaultValue: 'l',
+  },
+  {
+    key: '5',
+    param: 'disabled',
+    description: '按钮是否被禁用',
+    type: 'boolean',
+    defaultValue: 'false',
+  },
+  {
+    key: '6',
+    param: 'loading',
+    description: '按钮是否加载中',
+    type: 'boolean',
+    defaultValue: 'false',
+  },
+  {
+    key: '7',
+    param: 'long',
+    description: '按钮是否通栏',
+    type: 'boolean',
+    defaultValue: 'false',
+  },
+]
 </script>
 
 <template>
@@ -55,63 +134,7 @@ defineExpose({
       <h2 id="API">API</h2>
       通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：<code>type</code> ->
       <code>size</code> -> <code>shape</code> -> <code>status</code> -> <code>disabled</code>。
-      <table>
-        <thead>
-          <tr>
-            <th>参数</th>
-            <th>描述</th>
-            <th>类型</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>type</td>
-            <td>按钮的类型</td>
-            <td><code>primary</code> | <code>secondary</code> | <code>outline</code></td>
-            <td><code>primary</code></td>
-          </tr>
-          <tr>
-            <td>shape</td>
-            <td>按钮的形状</td>
-            <td><code>round</code> | <code>circle</code> | <code>square</code></td>
-            <td><code>-</code></td>
-          </tr>
-          <tr>
-            <td>status</td>
-            <td>按钮的状态</td>
-            <td>
-              <code>primary</code> | <code>success</code> | <code>warning</code> |
-              <code>danger</code>
-            </td>
-            <td><code>-</code></td>
-          </tr>
-          <tr>
-            <td>size</td>
-            <td>按钮的大小</td>
-            <td><code>s</code> | <code>m</code> | <code>l</code> | <code>xl</code></td>
-            <td><code>l</code></td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>按钮是否被禁用</td>
-            <td><code>boolean</code></td>
-            <td><code>false</code></td>
-          </tr>
-          <tr>
-            <td>loading</td>
-            <td>按钮是否加载中</td>
-            <td><code>boolean</code></td>
-            <td><code>false</code></td>
-          </tr>
-          <tr>
-            <td>long</td>
-            <td>按钮是否通栏</td>
-            <td><code>boolean</code></td>
-            <td><code>false</code></td>
-          </tr>
-        </tbody>
-      </table>
+      <a-table :columns="columns" :data-source="dataSource" :scroll="{ x: 1500 }" sticky />
     </ArticleSide>
   </div>
 </template>
