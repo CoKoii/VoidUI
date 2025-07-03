@@ -12,9 +12,7 @@ defineExpose({
 
 <template>
   <ConfigProvider :theme="themeStore.antdTheme">
-    <div>
-      <Layout />
-    </div>
+    <Layout />
   </ConfigProvider>
 </template>
 
