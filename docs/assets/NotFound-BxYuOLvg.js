@@ -1,0 +1,1 @@
+import{d as t,a as n,b as s,o as a}from"./index-D-y18z8c.js";const d={class:"NotFound"},_=t({__name:"NotFound",setup(r,{expose:e}){return e({name:"NotFound"}),(u,o)=>(a(),n("div",d,o[0]||(o[0]=[s("h1",null,"404 - Not Found",-1)])))}});export{_ as default};

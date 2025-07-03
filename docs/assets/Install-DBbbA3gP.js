@@ -1,1 +1,0 @@
-import{d as t,a,b as n,o}from"./index-DtGum7WB.js";const l={class:"Install"},p=t({__name:"Install",setup(r,{expose:s}){return s({name:"Install"}),(c,e)=>(o(),a("div",l,e[0]||(e[0]=[n("h1",null,"Welcome",-1)])))}});export{p as default};
