@@ -11,6 +11,7 @@ const columns = [
     title: '参数',
     dataIndex: 'param',
     key: 'param',
+    width: 500,
   },
   {
     title: '描述',
@@ -22,6 +23,8 @@ const columns = [
     title: '类型',
     dataIndex: 'type',
     key: 'type',
+    width: 500,
+
     customRender: ({ text }: { text: string }) =>
       h('span', { style: { color: '#c41d7f', fontWeight: '500' } }, text),
   },
@@ -29,6 +32,7 @@ const columns = [
     title: '默认值',
     dataIndex: 'defaultValue',
     key: 'defaultValue',
+    width: 500,
   },
 ]
 
