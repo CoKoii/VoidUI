@@ -6,6 +6,7 @@ import { useThemeStore } from '@/stores/theme'
 const themeStore = useThemeStore()
 const handleThemeChange = (theme: 'light' | 'dark') => {
   themeStore.setTheme(theme)
+  return undefined
 }
 defineExpose({
   name: 'Tools',
