@@ -26,6 +26,9 @@ importers:
       shiki:
         specifier: ^3.7.0
         version: 3.7.0
+      void-design-vue:
+        specifier: ^1.0.9
+        version: 1.0.9(vue@3.5.17(typescript@5.8.3))
       vue:
         specifier: ^3.5.17
         version: 3.5.17(typescript@5.8.3)
@@ -90,6 +93,13 @@ packages:
 
   '@ant-design/colors@6.0.0':
     resolution: {integrity: sha512-qAZRvPzfdWHtfameEGP2Qvuf838NhergR35o+EuVyB5XvSA98xod5r4utvi4TJ3ywmevm290g9nsCG5MryrdWQ==}
+
+  '@ant-design/colors@7.2.1':
+    resolution: {integrity: sha512-lCHDcEzieu4GA3n8ELeZ5VQ8pKQAWcGGLRTQ50aQM2iqPpq2evTxER84jfdPvsPAtEcZ7m44NI45edFMo8oOYQ==}
+
+  '@ant-design/fast-color@2.0.6':
+    resolution: {integrity: sha512-y2217gk4NqL35giHl72o6Zzqji9O7vHh9YmhUVkPtAOpoTCH4uWxo/pr4VE8t0+ChEPs0qo4eJRC5Q1eXWo3vA==}
+    engines: {node: '>=8.x'}
 
   '@ant-design/icons-svg@4.4.2':
     resolution: {integrity: sha512-vHbT+zJEVzllwP+CM+ul7reTEfBR0vgxFe7+lREAsAA7YGsYpboiq2sQNeQeRvh09GfQgs/GyFEvZpJ9cLXpXA==}
@@ -1936,6 +1946,12 @@ packages:
       yaml:
         optional: true
 
+  void-design-vue@1.0.9:
+    resolution: {integrity: sha512-lWm5mDU1RDCKtB3fEc2Cmt/IlPcLpIbAia24jxGaidWqvitFb67FlmczqIQBrNNepMkmTagk2Qo/XDGR1thvgA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      vue: ^3.3.0
+
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
@@ -2015,6 +2031,14 @@ snapshots:
   '@ant-design/colors@6.0.0':
     dependencies:
       '@ctrl/tinycolor': 3.6.1
+
+  '@ant-design/colors@7.2.1':
+    dependencies:
+      '@ant-design/fast-color': 2.0.6
+
+  '@ant-design/fast-color@2.0.6':
+    dependencies:
+      '@babel/runtime': 7.27.6
 
   '@ant-design/icons-svg@4.4.2': {}
 
@@ -3849,6 +3873,11 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.4.2
       sass: 1.89.2
+
+  void-design-vue@1.0.9(vue@3.5.17(typescript@5.8.3)):
+    dependencies:
+      '@ant-design/colors': 7.2.1
+      vue: 3.5.17(typescript@5.8.3)
 
   vscode-uri@3.1.0: {}
 
