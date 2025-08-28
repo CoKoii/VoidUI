@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   user-select: none;
-  span {
+  span,
+  button {
     padding: 13px;
     background-color: transparent;
     transition: all 0.3s ease;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from 'ant-design-vue'
-import { GithubFilled, BulbFilled } from '@ant-design/icons-vue'
+import { GithubFilled } from '@ant-design/icons-vue'
 import { VThemeToggle } from 'void-design-vue'
 import { useThemeStore } from '@/stores/theme'
 const themeStore = useThemeStore()
@@ -37,11 +37,9 @@ defineExpose({
     </Tooltip>
     <Tooltip placement="bottom">
       <template #title>
-        <span>日/夜</span>
+        <span>{{ themeStore.currentTheme === 'dark' ? '浅色主题' : '深色主题' }}</span>
       </template>
-      <VThemeToggle @theme-change="handleThemeChange">
-        <BulbFilled :style="{ fontSize: '14px', color: 'var(--text)' }" />
-      </VThemeToggle>
+      <VThemeToggle @theme-change="handleThemeChange"> </VThemeToggle>
     </Tooltip>
   </div>
 </template>
