@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Button } from 'ant-design-vue'
 import { SendOutlined } from '@ant-design/icons-vue'
-import { defineExpose, h } from 'vue'
+import { h } from 'vue'
 defineExpose({
   name: 'Hero',
 })
