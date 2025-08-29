@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ArticleSide from '@/components/ArticleSide/ArticleSide.vue'
 import { h } from 'vue'
+import { VCode } from 'void-design-vue'
 defineExpose({
   name: 'Install',
 })
@@ -92,16 +93,15 @@ const dataSource = [
       <h1>快速上手</h1>
       <p>点击开始一个即时操作</p>
       <h2 id="安装方式">安装方式</h2>
-      <a-alert message="npm install void-design-vue" type="success" />
-      <br />
-      <a-alert message="pnpm add void-design-vue" type="info" />
-      <br />
-      <a-alert message="yarn add void-design-vue" type="success" />
+
+      <VCode :line-numbers="true" :extra="{ copy: true, download: true, showLang: true }" lang="js">
+        {{ 'npm install void-design-vue\npnpm add void-design-vue\nyarn add void-design-vue' }}
+      </VCode>
       <h2 id="按钮尺寸">按钮尺寸</h2>
       <p>
         按钮分为：<code>s</code> 、<code>m</code> 、<code>l</code> 、<code>xl</code>
-        四种尺寸。高度分别为：<code>24px</code>、<code>32px</code>、<code>36px</code>、<code
-          >48px</code
+        四种尺寸。高度分别为：<code>24px</code>、<code>32px</code>、<code>36px</code>、<codepn
+          >48px</codepn
         >
         。默认尺寸为<code>l</code>。
       </p>
