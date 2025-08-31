@@ -22,31 +22,21 @@ defineExpose({
 
       <VCode
         :line-numbers="false"
-        :extra="{ copy: true, download: false, showLang: true }"
+        :extra="{ copy: true, showLang: true }"
         :dots="false"
         lang="bash"
       >
         {{ 'npm install @fortawesome/free-solid-svg-icons' }}
       </VCode>
       <h2 id="基本用法">基本用法</h2>
-      <VCode
-        :line-numbers="false"
-        :extra="{ copy: true, download: true, showLang: true }"
-        :dots="true"
-        lang="js"
-      >
+      <VCode :line-numbers="true" :extra="{ copy: true, showLang: true }" :dots="true" lang="js">
         {{
           "import { VButton, VThemeToggle } from 'void-design-vue'\nimport 'void-design-vue/style.css'\n\n// 在组件中使用\nexport default {\n  components: {\n    VButton,\n    VThemeToggle,\n  },\n}"
         }}
       </VCode>
       <h2 id="完整引入">完整引入</h2>
       <p>main.ts</p>
-      <VCode
-        :line-numbers="false"
-        :extra="{ copy: true, download: true, showLang: true }"
-        :dots="true"
-        lang="js"
-      >
+      <VCode :line-numbers="false" :extra="{ copy: true, showLang: true }" :dots="true" lang="js">
         {{
           "import { createApp } from \'vue\'\nimport { install } from \'void-design-vue\'\nimport \'void-design-vue/style.css\'\nimport App from \'./App.vue\'\n\nconst app = createApp(App)\napp.use(install)\napp.mount(\'#app\')"
         }}

@@ -15,7 +15,7 @@ defineExpose({
 
       <VCode
         :line-numbers="false"
-        :extra="{ copy: true, download: false, showLang: true }"
+        :extra="{ copy: true, showLang: true }"
         :dots="false"
         lang="bash"
       >
@@ -24,10 +24,10 @@ defineExpose({
         }}
       </VCode>
       <h2 id="按需引入">按需引入（推荐）</h2>
-      <p>main.ts</p>
       <VCode
         :line-numbers="false"
-        :extra="{ copy: true, download: true, showLang: true }"
+        path="main.ts"
+        :extra="{ copy: true, showLang: true }"
         :dots="true"
         lang="js"
       >
@@ -36,10 +36,10 @@ defineExpose({
         }}
       </VCode>
       <h2 id="完整引入">完整引入</h2>
-      <p>main.ts</p>
       <VCode
         :line-numbers="false"
-        :extra="{ copy: true, download: true, showLang: true }"
+        path="main.ts"
+        :extra="{ copy: true, showLang: true }"
         :dots="true"
         lang="js"
       >
