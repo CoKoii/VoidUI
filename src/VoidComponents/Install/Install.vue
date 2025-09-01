@@ -10,7 +10,6 @@ defineExpose({
   <div class="Install" ref="containerRef">
     <ArticleSide>
       <h1>快速上手</h1>
-      <p>点击开始一个即时操作</p>
       <h2 id="安装方式">安装方式</h2>
 
       <VCode
