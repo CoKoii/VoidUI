@@ -1,0 +1,1 @@
+import{d as t,a as n,b as s,o as a,_ as d}from"./index-CM5LaMq5.js";const _={class:"NotFound"},c=t({__name:"NotFound",setup(r,{expose:e}){return e({name:"NotFound"}),(p,o)=>(a(),n("div",_,[...o[0]||(o[0]=[s("h1",null,"404 Not Found",-1)])]))}}),l=d(c,[["__scopeId","data-v-10893c74"]]);export{l as default};
