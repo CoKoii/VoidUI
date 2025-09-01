@@ -1,9 +1,21 @@
 <script setup lang="ts">
 import ArticleSide from '@/components/ArticleSide/ArticleSide.vue'
-import { VCode } from 'void-design-vue'
+import { faCopy, faDownload, faMoon } from '@fortawesome/free-solid-svg-icons'
+import { VCode, VCodePreview, VIcon } from 'void-design-vue'
 defineExpose({
   name: 'Icon',
 })
+const v1 = `<script setup lang="ts">
+import { VIcon } from 'void-design-vue'
+import { faCopy, faDownload, faMoon } from '@fortawesome/free-solid-svg-icons'
+<\/script>
+
+<template>
+  <VIcon :icon="faMoon" />
+  <VIcon :icon="faCopy" />
+  <VIcon :icon="faDownload" />
+</template>
+`
 </script>
 
 <template>
@@ -19,7 +31,6 @@ defineExpose({
       >
       <span>图标库，该网站提供丰富的高质量图标资源。</span>
       <h2 id="依赖安装">依赖安装</h2>
-
       <VCode
         :line-numbers="false"
         :extra="{ copy: true, showLang: true }"
@@ -29,11 +40,16 @@ defineExpose({
         {{ 'npm install @fortawesome/free-solid-svg-icons' }}
       </VCode>
       <h2 id="基本用法">基本用法</h2>
-      <VCode :line-numbers="true" :extra="{ copy: true, showLang: true }" :dots="true" lang="js">
-        {{
-          "import { VButton, VThemeToggle } from 'void-design-vue'\nimport 'void-design-vue/style.css'\n\n// 在组件中使用\nexport default {\n  components: {\n    VButton,\n    VThemeToggle,\n  },\n}"
-        }}
-      </VCode>
+      <VCodePreview lang="vue">
+        <template #demo>
+          <VIcon :icon="faMoon" />
+          <VIcon :icon="faCopy" />
+          <VIcon :icon="faDownload" />
+        </template>
+        <template #code>
+          {{ v1 }}
+        </template>
+      </VCodePreview>
       <h2 id="完整引入">完整引入</h2>
       <p>main.ts</p>
       <VCode :line-numbers="false" :extra="{ copy: true, showLang: true }" :dots="true" lang="js">
