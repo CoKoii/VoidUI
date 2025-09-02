@@ -39,7 +39,7 @@ defineExpose({
       <template #title>
         <span>{{ themeStore.currentTheme === 'dark' ? '浅色主题' : '深色主题' }}</span>
       </template>
-      <VThemeToggle @theme-change="handleThemeChange"> </VThemeToggle>
+      <VThemeToggle @theme-change="handleThemeChange" :follow-system="true"> </VThemeToggle>
     </Tooltip>
   </div>
 </template>
