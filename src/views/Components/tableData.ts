@@ -8,6 +8,7 @@ export const columns = [
     children: [
       { title: 'Button 按钮', path: 'button' },
       { title: 'Icon 图标', path: 'icon' },
+      { title: 'ThemeToggle 主题切换', path: 'themeToggle' },
     ],
   },
   {

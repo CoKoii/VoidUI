@@ -4,10 +4,7 @@ import { GithubFilled } from '@ant-design/icons-vue'
 import { VThemeToggle } from 'void-design-vue'
 import { useThemeStore } from '@/stores/theme'
 const themeStore = useThemeStore()
-const handleThemeChange = (theme: 'light' | 'dark') => {
-  themeStore.setTheme(theme)
-  return undefined
-}
+
 defineExpose({
   name: 'Tools',
 })
@@ -39,7 +36,7 @@ defineExpose({
       <template #title>
         <span>{{ themeStore.currentTheme === 'dark' ? '浅色主题' : '深色主题' }}</span>
       </template>
-      <VThemeToggle @theme-change="handleThemeChange" :follow-system="true"> </VThemeToggle>
+      <VThemeToggle :follow-system="true"> </VThemeToggle>
     </Tooltip>
   </div>
 </template>
