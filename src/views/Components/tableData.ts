@@ -10,4 +10,8 @@ export const columns = [
       { title: 'Icon 图标', path: 'icon' },
     ],
   },
+  {
+    title: '文档组件',
+    children: [{ title: 'Code 代码高亮', path: 'code' }],
+  },
 ]
