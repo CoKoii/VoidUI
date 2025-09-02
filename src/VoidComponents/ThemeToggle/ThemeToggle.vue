@@ -118,9 +118,9 @@ const themeToggleDataSource = [
 const themeToggleEmitsDataSource = [
   {
     key: '1',
-    event: 'theme-change',
+    param: 'theme-change',
     description: '主题切换时触发',
-    params: '[theme: string]',
+    type: '() => darkTheme | lightTheme',
   },
 ]
 </script>
