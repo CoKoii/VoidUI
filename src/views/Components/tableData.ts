@@ -18,4 +18,8 @@ export const columns = [
       { title: 'CodePreview 代码预览', path: 'codePreview' },
     ],
   },
+  {
+    title: '数据展示',
+    children: [{ title: 'Card 卡片', path: 'card' }],
+  },
 ]

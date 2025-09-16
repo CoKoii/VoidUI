@@ -116,13 +116,20 @@ const dataSource = [
       >
       <span>图标库，该网站提供丰富的高质量图标资源。</span>
       <h2 id="依赖安装">依赖安装</h2>
+      <p>按需求安装相应的图标包</p>
       <VCode
         :line-numbers="false"
         :extra="{ copy: true, showLang: true }"
         :dots="false"
         lang="bash"
       >
-        {{ 'npm install @fortawesome/free-solid-svg-icons' }}
+        {{ `
+# 实心图标
+npm install @fortawesome/free-solid-svg-icons
+# 空心图标
+npm install @fortawesome/free-regular-svg-icons
+# 品牌图标
+npm install @fortawesome/free-brands-svg-icons` }}
       </VCode>
       <h2 id="基本用法">基本用法</h2>
       <VCodePreview lang="vue">
