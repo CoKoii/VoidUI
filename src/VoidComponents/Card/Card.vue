@@ -17,13 +17,13 @@ const columns = [
     title: '描述',
     dataIndex: 'description',
     key: 'description',
+
   },
   {
     title: '类型',
     dataIndex: 'type',
     key: 'type',
-    width: 300,
-
+    width: 200,
     customRender: ({ text }: { text: string }) =>
       h('span', { style: { color: '#c41d7f', fontWeight: '500' } }, text),
   },
