@@ -12,14 +12,14 @@ export const columns = [
     ],
   },
   {
+    title: '数据展示',
+    children: [{ title: 'Card 卡片', path: 'card' }],
+  },
+  {
     title: '文档组件',
     children: [
       { title: 'Code 代码高亮', path: 'code' },
       { title: 'CodePreview 代码预览', path: 'codePreview' },
     ],
-  },
-  {
-    title: '数据展示',
-    children: [{ title: 'Card 卡片', path: 'card' }],
   },
 ]
